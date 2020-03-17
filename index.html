@@ -26,17 +26,31 @@
 
   <link rel="stylesheet" href="css/style.css">
 
-  <style>
-    #myVideo {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100vw;
-      min-height: 100vh;
-      z-index: -200;
-    }
-  </style>
+<style>
+ .navbar-custom { 
+    background-color: black;
+    font-weight: bold;
+    color:white;
+    margin-bottom: 32px; 
+    width:100%;
+} 
 
+.navbar-custom a { 
+    color:white;
+} 
+
+.class-item{height:125px}
+
+.class-item img{height:116px;}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+</style>
 
 </head>
 
@@ -144,33 +158,30 @@
     <div class="site-section" style="height:100vh"  id="cameras-section"  >
       <div class="container">
     
-        <div class="row">
-          <div class="col-12">
-            <ul class="nav days d-flex" role="tablist">
-              <!--CCTV-->
+        <div class="row" >
+
+          <nav class="navbar navbar-expand-sm navbar-custom">
+            
+            <!-- Links -->
+            <ul class="nav navbar-nav nav-fill w-100" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="sunday-tab" data-toggle="tab" href="#nav-cctv" role="tab"
-                  aria-controls="sunday" aria-selected="true">CCTV Cameras</a>
+                <a  data-toggle="tab" class="nav-link" href="#nav-cctv " role="tab">CCTV</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="sunday-tab" data-toggle="tab" href="#nav-dvr" role="tab" aria-controls="sunday"
-                  aria-selected="true">DVR</a>
-              </li>
-              <!--IP-->
-              <li class="nav-item">
-                <a class="nav-link" id="monday-tab" data-toggle="tab" href="#nav-ip" role="tab" aria-controls="monday"
-                  aria-selected="false">IP Cameras</a>
+                <a data-toggle="tab" class="nav-link" href="#nav-dvr" role="tab">DVR</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="sunday-tab" data-toggle="tab" href="#nav-nvr" role="tab" aria-controls="sunday"
-                  aria-selected="true">NVR</a>
+                <a data-toggle="tab" class="nav-link" href="#nav-ip" role="tab">IP Cameras</a>
+              </li>
+              <li class="nav-item">
+                <a data-toggle="tab" class="nav-link" href="#nav-nvr" role="tab">NVR</a>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
     
         <!--tabs-->
-        <div class="tab-content">
+        <div class="tab-content" style="height:100vh">
     
           <!--CCTV-->
           <div class="tab-pane fade show active" id="nav-cctv" role="tabpanel" aria-labelledby="nav-sunday-tab">
